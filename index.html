@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      color: hsl(237, 12%, 33%);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      height: 100vh;
+      flex-direction: column;
+      background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+      justify-content: center;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    .faq-container {
+      background-image: url('https://res.cloudinary.com/seyitan/image/upload/v1618130803/illustration-woman-online-desktop_tajgbq.svg'), url('https://res.cloudinary.com/seyitan/image/upload/v1618130802/bg-pattern-desktop_ilbmen.svg');
+      background-size: 40%, 80%;
+      width: 80vw;
+      height: 70vh;
+      background-color: #fff;
+      background-position: top 40% right 113%, top 69% right 340%;
+      background-repeat: no-repeat;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .img-container {
+      width: 40%;
+      height: 500px;
+    }
+
+    .box-image {
+      width: 12%;
+      position: absolute;
+      top: 45%;
+      left: 4%;
+    }
+
+    .faq-overall {
+      align-items: center;
+      max-height: 80%;
+      height: 100%;
+      display: flex;
+      width: 50%;
+      margin-right: 60px;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+    }
+
+    .faq-title {
+      font-size: 10px;
+      margin: 0;
+    }
+
+    .faq-section {
+      transition: max-height 0.5s ease;
+      width: 100%;
+      max-height: 0;
+      cursor: pointer;
+      padding-top: 15px;
+      padding-bottom: 20px;
+      text-align: left;
+      font-size: 20px;
+      border-bottom: 1px solid rgba(100, 100, 0, 0.2);
+    }
+
+    .faq-section:hover {
+      color: hsl(14, 88%, 65%);
+    }
+
+    .faq-section .question {
+      background-image: url ("https://res.cloudinary.com/seyitan/image/upload/v1618137096/icon-arrow-down_leud1f.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+
+    .faq-section .answer {
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: transform 0.5s ease, max-height 1s ease-out;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 7px;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="faq-container">
+    <div class="img-container">
+      <img class="box-image" src="https://res.cloudinary.com/seyitan/image/upload/v1618126359/illustration-box-desktop_iirlmq.svg" alt="box">
+    </div>
+    <div class="faq-overall">
+      <div class="faq-title">
+        <h1>FAQ</h1>
+      </div>
+      <div class="faq-section">
+        <p class="question">How many team members can I invite?</p>
+        <p class="answer">
+          You can invite up to 2 aditional users on the Free plan. There is no limit on team members for the premium
+          plan.
+        </p>
+      </div>
+      <div class="faq-section">
+        <p class="question">What is the maximum file upload size?</p>
+        <p class="answer">
+          No more that 2gb. All files in your account must fit your allotated storage space.
+        </p>
+      </div>
+      <div class="faq-section">
+        <p class="question">How do I reset my password?</p>
+        <p class="answer">
+          Click "Forgot password" from the login page or "Change password" from your profile page. A reset link will be
+          emailed to you.
+        </p>
+      </div>
+      <div class="faq-section">
+        <p class="question">Can I cancel my subscription?</p>
+        <p class="answer">
+          Yes! Send us a message and we'll process your request no questions asked.
+        </p>
+      </div>
+      <div class="faq-section">
+        <p class="question">Do you provide additional support?</p>
+        <p class="answer">
+          Chat and email support is available 24/7. Phone lines are open during normal business hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="attribution">
+    Challenge body
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+      href="https://www.githb.com/MoranGuy">Maksym Novikov</a>
+  </footer>
+</body>
+
+</html>
